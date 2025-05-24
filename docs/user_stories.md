@@ -18,5 +18,5 @@
 6. **Ordenar Tarefas por Prioridade ou Data**   
    *Como um estudante, quero ordenar as tarefas por data de entrega ou prioridade, para saber o que é mais urgente.*
 
-7. **Receber Lembretes** 
+7. **Receber Lembretes**
    *Como um estudante, quero receber lembretes de tarefas com prazos próximos, para não esquecer de cumpri-las.*
