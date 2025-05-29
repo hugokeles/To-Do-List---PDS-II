@@ -41,7 +41,7 @@ git clone https://github.com/hugokeles/To-Do-List---PDS-II/tree/main
 
 2.  *Navegue até o diretório do projeto:*
 
-    Depois de clonar, entre na pasta do projeto com o comando:
+Depois de clonar, entre na pasta do projeto com o comando:
 cd nome_da_pasta
 (nome_da_pasta substituir pelo nome do repositório)
 
