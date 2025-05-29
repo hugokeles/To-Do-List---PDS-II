@@ -40,13 +40,14 @@ git clone https://github.com/hugokeles/To-Do-List---PDS-II/tree/main
 
 
 2.  *Navegue até o diretório do projeto:*
+
     Depois de clonar, entre na pasta do projeto com o comando:
 cd nome_da_pasta
 (nome_da_pasta substituir pelo nome do repositório)
 
-3.  *Compilar o projeto:*
-
-    Se o projeto fornecer um Makefile, compile usando:
+4.  *Compilar o projeto:*
+   
+Se o projeto fornecer um Makefile, compile usando:
     
 ![image](https://github.com/user-attachments/assets/14725c1f-7474-4fa6-8e76-0f25c9205e83)
 
