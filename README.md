@@ -36,38 +36,41 @@ Siga os passos abaixo para clonar o repositório e configurar o projeto localmen
 
 1.  *Clone o repositório:*
 No terminal, digite o comando abaixo:
+
 git clone https://github.com/hugokeles/To-Do-List---PDS-II/tree/main
 
 
 2.  *Navegue até o diretório do projeto:*
 
 Depois de clonar, entre na pasta do projeto com o comando:
-cd nome_da_pasta
+
+![image](https://github.com/user-attachments/assets/fdf31a30-a0c5-4757-98ed-8ee0b473eba6)
+
 (nome_da_pasta substituir pelo nome do repositório)
 
-4.  *Compilar o projeto:*
+3.  *Compilar o projeto:*
    
 Se o projeto fornecer um Makefile, compile usando:
     
 ![image](https://github.com/user-attachments/assets/14725c1f-7474-4fa6-8e76-0f25c9205e83)
 
-    Se nao tiver, compile manualmente utilizando:
+Se não tiver, compile manualmente utilizando:
     
 ![image](https://github.com/user-attachments/assets/33061d6a-86a8-48fb-bd83-529c37a43b98)
 
-    Troque Troque principal.cpp pelo nome do arquivo principal do projeto.
-    
-    Se o projeto tiver vários arquivos .cpp:
+(Troque principal.cpp pelo nome do arquivo principal do projeto.)
+
+Se o projeto tiver vários arquivos .cpp:
 
 ![image](https://github.com/user-attachments/assets/a085b654-f830-495a-8bef-88575a906914)
 
 4.  *Executar o programa:*
 
-    Após a compilação, rode o programa com:
+Após a compilação, rode o programa com:
     
 ![image](https://github.com/user-attachments/assets/671d48b7-fb97-4d7f-9727-89a8c234d6da)
 
-    Ou, no windows:
+Ou, no windows:
     
 ![image](https://github.com/user-attachments/assets/15ffe318-dfe4-4996-b752-1975ff1487e9)
 
