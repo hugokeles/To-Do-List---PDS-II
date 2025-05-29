@@ -35,6 +35,8 @@ Para desenvolver e executar este projeto, você precisará de:
 Siga os passos abaixo para clonar o repositório e configurar o projeto localmente:
 
 1.  *Clone o repositório:*
+No terminal, digite o comando abaixo:
+git clone 
 
 
 2.  *Navegue até o diretório do projeto:*
