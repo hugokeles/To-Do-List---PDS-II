@@ -45,19 +45,29 @@ cd nome_da_pasta
 (nome_da_pasta substituir pelo nome do repositório)
 
 3.  *Compilar o projeto:*
+
     Se o projeto fornecer um Makefile, compile usando:
+    
 ![image](https://github.com/user-attachments/assets/14725c1f-7474-4fa6-8e76-0f25c9205e83)
+
     Se não tiver, compile manualmente com o g++:
+    
 ![image](https://github.com/user-attachments/assets/33061d6a-86a8-48fb-bd83-529c37a43b98)
+
     Troque Troque principal.cpp pelo nome do arquivo principal do projeto.
+    
     Se o projeto tiver vários arquivos .cpp:
+
 ![image](https://github.com/user-attachments/assets/a085b654-f830-495a-8bef-88575a906914)
 
- 
-4.  *Executar o programa:*    
+4.  *Executar o programa:*
+
     Após a compilação, rode o programa com:
+    
 ![image](https://github.com/user-attachments/assets/671d48b7-fb97-4d7f-9727-89a8c234d6da)
-    Ou, no windiws:
+
+    Ou, no windows:
+    
 ![image](https://github.com/user-attachments/assets/15ffe318-dfe4-4996-b752-1975ff1487e9)
 
 
