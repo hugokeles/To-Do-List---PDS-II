@@ -51,7 +51,7 @@ Se o projeto fornecer um Makefile, compile usando:
     
 ![image](https://github.com/user-attachments/assets/14725c1f-7474-4fa6-8e76-0f25c9205e83)
 
-    Se não tiver, compile manualmente com o g++:
+    Se nao tiver, compile manualmente utilizando:
     
 ![image](https://github.com/user-attachments/assets/33061d6a-86a8-48fb-bd83-529c37a43b98)
 
