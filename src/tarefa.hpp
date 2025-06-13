@@ -5,11 +5,11 @@
 
 class Tarefa {
 private:
-    std::string descricao;
-    std::string disciplina;
-    std::string data; // formato esperado: "DD/MM/AAAA"
-    std::string prioridade; // "alta", "media" ou "baixa"
-    bool concluida;
+    std::string descricao; //o que precisa ser feito
+    std::string disciplina; //matéria da tarefa
+    std::string data; //prazo: formato esperado: "DD/MM/AAAA"
+    std::string prioridade; //nível de importância: "alta", "media" ou "baixa"
+    bool concluida; //se a tarefa já foi feita (true ou false)
 
 public:
     // Construtor
