@@ -10,7 +10,7 @@ private:
     std::vector<Tarefa> tarefas;
 
 public:
-    // Gerenciamento básico
+    // Métodos básicos
     void adicionarTarefa(const Tarefa& tarefa);
     void removerTarefa(int indice);
     
@@ -29,6 +29,9 @@ public:
     // Lembretes
     std::vector<Tarefa> gerarLembretes(int dias = 3) const;
     
+    // Acesso às tarefas (para uso com ArquivoManager)
+    const std::vector<Tarefa>& obterTarefas() const { return tarefas; }
+    void definirTarefas(const std::vector<Tarefa>& novasTarefas) { tarefas = novasTarefas; }
 };
 
 #endif
