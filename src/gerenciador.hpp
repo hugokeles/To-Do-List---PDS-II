@@ -8,10 +8,6 @@
 class GerenciadorTarefas {
 private:
     std::vector<Tarefa> tarefas;
-    
-    // Métodos auxiliares para manipulação de arquivos
-    bool salvarParaArquivo(const std::string& nomeArquivo) const;
-    bool carregarDoArquivo(const std::string& nomeArquivo);
 
 public:
     // Gerenciamento básico
@@ -33,9 +29,6 @@ public:
     // Lembretes
     std::vector<Tarefa> gerarLembretes(int dias = 3) const;
     
-    // Persistência (interface simplificada)
-    bool salvarTarefas(const std::string& nomeArquivo) const;
-    bool carregarTarefas(const std::string& nomeArquivo);
 };
 
 #endif
