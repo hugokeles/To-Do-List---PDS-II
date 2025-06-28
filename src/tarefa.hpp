@@ -2,6 +2,7 @@
 #define TAREFA_HPP
 
 #include <string>
+#include <stdexcept>  // Necessário para lançar exceções (ex: std::invalid_argument)
 
 class Tarefa {
 private:
@@ -12,7 +13,10 @@ private:
     bool concluida; //se a tarefa já foi feita (true ou false)
 
 public:
-    // Construtor
+    /*
+     * Construtor da classe.
+     * Pode lançar std::invalid_argument se prioridade ou data forem inválidas.
+     */
     Tarefa(std::string desc, std::string disc, std::string dataEntrega, std::string prioridadeNivel);
 
     // Getters
@@ -25,11 +29,22 @@ public:
     // Setters
     void setDescricao(std::string novaDesc);
     void setDisciplina(std::string novaDisciplina);
+
+    /*
+     * Define a data de entrega da tarefa.
+     * Lança exceção se a nova data for vazia.
+     */
     void setData(std::string novaData);
+
+    /*
+     * Define a prioridade da tarefa.
+     * Lança exceção se não for "alta", "media" ou "baixa".
+     */
     void setPrioridade(std::string novaPrioridade);
+
     void setConcluida(bool status);
 
-    // Retorna um resumo formatado da tarefa
+    // Retorna um resumo da tarefa, como: "Estudar PDS2 (PDS2 - 25/06/2025)"
     std::string getResumo() const;
 };
 
