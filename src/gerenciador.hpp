@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include <stdexcept>  // Necessário para std::out_of_range e std::runtime_error
 #include "tarefa.hpp"
 
 class GerenciadorTarefas {
@@ -12,6 +13,11 @@ private:
 public:
     // Métodos básicos
     void adicionarTarefa(const Tarefa& tarefa);
+
+    /*
+    * Remove a tarefa no índice especificado.
+    * Lança std::out_of_range se o índice for inválido.
+    */
     void removerTarefa(int indice);
     
     // Visualização
@@ -24,6 +30,10 @@ public:
     void ordenarPorData();
     
     // Status
+    /*
+     * Marca como concluída a tarefa no índice especificado.
+     * Lança std::out_of_range se o índice for inválido.
+     */
     void marcarComoConcluida(int indice);
     
     // Lembretes
