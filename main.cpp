@@ -7,18 +7,15 @@
 int main() {
     GerenciadorTarefas gerenciador;
 
-  
     std::string nomeArquivo = "tarefas.csv";
     auto tarefasCarregadas = ArquivoManager::carregarTarefas(nomeArquivo);
 
-   
     for (const auto& tarefa : tarefasCarregadas) {
         gerenciador.adicionarTarefa(tarefa);
     }
 
     int opcao = 0;
     while (opcao != 7) {
-       
         std::cout << "\n===== To-Do List Universitário =====\n";
         std::cout << "1 - Adicionar tarefa\n";
         std::cout << "2 - Listar todas as tarefas\n";
@@ -30,8 +27,8 @@ int main() {
         std::cout << "Escolha uma opção: ";
         std::cin >> opcao;
      
+        //Adicionar nova tarefa
         if (opcao == 1) {
-            // Adiciona uma nova tarefa
             std::string desc, disc, data, prioridade;
             std::cout << "Descrição (sem espaços): ";
             std::cin >> desc;
@@ -44,26 +41,23 @@ int main() {
 
             Tarefa nova(desc, disc, data, prioridade);
             gerenciador.adicionarTarefa(nova);
-
             std::cout << "Tarefa adicionada!\n";
 
         } else if (opcao == 2) {
-            // Mostra todas as tarefas
-            gerenciador.listarTarefas(false);
+            gerenciador.listarTarefas();
+
 
         } else if (opcao == 3) {
-            // Mostra só as tarefas pendentes
-            gerenciador.listarTarefas(true);
+            gerenciador.listarTarefasPendentes();
 
         } else if (opcao == 4) {
-            // Filtra tarefas por disciplina
             std::string filtro;
             std::cout << "Digite a disciplina (sem espaços): ";
             std::cin >> filtro;
 
             auto filtradas = gerenciador.filtrarPorDisciplina(filtro);
 
-            if (filtradas.size() == 0) {
+            if (filtradas.empty()) {
                 std::cout << "Nenhuma tarefa encontrada para essa disciplina.\n";
             } else {
                 for (const auto& t : filtradas) {
@@ -72,15 +66,13 @@ int main() {
             }
 
         } else if (opcao == 5) {
-            // Marca tarefa como concluída
             int indice;
             std::cout << "Digite o número da tarefa para marcar como concluída: ";
             std::cin >> indice;
             gerenciador.marcarComoConcluida(indice);
 
         } else if (opcao == 6) {
-            // Salva tarefas no arquivo
-            bool sucesso = ArquivoManager::salvarTarefas(nomeArquivo, gerenciador.getTarefas());
+            bool sucesso = ArquivoManager::salvarTarefas(nomeArquivo, gerenciador.obterTarefas());
 
             if (sucesso) {
                 std::cout << "Tarefas salvas com sucesso!\n";
