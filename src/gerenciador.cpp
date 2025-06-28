@@ -81,4 +81,23 @@ void GerenciadorTarefas::marcarComoConcluida(int indice) {
 }
 
 std::vector<Tarefa> GerenciadorTarefas::gerarLembretes(int dias) const {
-    std::vector<Tare
+    std::vector<Tarefa> lembretes;
+    time_t agora = time(nullptr);
+    struct tm* tm_agora = localtime(&agora);
+    tm_agora->tm_hour = tm_agora->tm_min = tm_agora->tm_sec = 0;
+    agora = mktime(tm_agora);
+    
+    for (const auto& tarefa : tarefas) {
+        if (!tarefa.estaConcluida()) {
+            struct tm tm_tarefa = {0};
+            strptime(tarefa.getData().c_str(), "%d/%m/%Y", &tm_tarefa);
+            time_t time_tarefa = mktime(&tm_tarefa);
+            double diferenca = difftime(time_tarefa, agora) / (60 * 60 * 24);
+            
+            if (diferenca >= 0 && diferenca <= dias) {
+                lembretes.push_back(tarefa);
+            }
+        }
+    }
+    return lembretes;
+}
