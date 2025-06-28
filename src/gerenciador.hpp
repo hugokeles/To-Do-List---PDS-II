@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <string>
-#include <stdexcept>  // Necessário para std::out_of_range e std::runtime_error
+#include <stdexcept> // Para std::out_of_range e std::runtime_error
 #include "tarefa.hpp"
 
 class GerenciadorTarefas {
