@@ -10,11 +10,15 @@ void GerenciadorTarefas::adicionarTarefa(const Tarefa& tarefa) {
     tarefas.push_back(tarefa);
 }
 
+/*
+ * Remove a tarefa do vetor usando índice.
+ * Lança exceção se o índice for inválido.
+ */
 void GerenciadorTarefas::removerTarefa(int indice) {
     if (indice >= 0 && indice < static_cast<int>(tarefas.size())) {
         tarefas.erase(tarefas.begin() + indice);
     } else {
-        std::cerr << "Erro: Índice inválido!\n";
+        throw std::out_of_range("Índice inválido para remoção de tarefa.");
     }
 }
 
@@ -72,11 +76,15 @@ void GerenciadorTarefas::ordenarPorData() {
     });
 }
 
+/*
+ * Marca a tarefa como concluída.
+ * Lança exceção se o índice for inválido.
+ */
 void GerenciadorTarefas::marcarComoConcluida(int indice) {
     if (indice >= 0 && indice < static_cast<int>(tarefas.size())) {
         tarefas[indice].setConcluida(true);
     } else {
-        std::cerr << "Erro: Índice inválido!\n";
+        throw std::out_of_range("Índice inválido ao marcar tarefa como concluída.");
     }
 }
 
