@@ -2,9 +2,6 @@
 #include <fstream>
 #include <sstream>
 
-/*
- * Salva as tarefas no formato: disciplina;descricao;data;prioridade;concluida
- */
 bool ArquivoManager::salvarTarefas(const std::string& nomeArquivo, const std::vector<Tarefa>& tarefas) {
     std::ofstream arquivo(nomeArquivo);
     
